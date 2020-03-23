@@ -5,6 +5,7 @@ from email.header import Header
 from lxml import etree
 import logging
 import os
+import sys
 
 previous_chapter = 0
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
@@ -64,12 +65,15 @@ def save_chapter(chapter: int):
 
 
 if __name__ == "__main__":
+    sender = sys.argv[1]
+    receiver = sys.argv[2]
+    password = sys.argv[3]
     try:
         init()
         web_content = get_content()
         current_chapter = get_num(web_content)
         if current_chapter > previous_chapter:
-            if not send_email('替换为你的QQ邮箱地址', '替换收信的地址', '替换为你的QQ邮箱授权码(在QQ邮箱网页端开启smtp服务时会自动生成一个授权码)', web_content):
+            if not send_email(sender, receiver, password, web_content):
                 send_email(web_content)
             save_chapter(current_chapter)
         else:
