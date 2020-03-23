@@ -1,6 +1,6 @@
 ## 介绍
 
-notify 是一个基于Python的小说更新提示爬虫，专用与《逆天邪神》小说的更新提示，信息来源为http://nitianxieshen.com。当小说更新时该爬虫会自动发送更新提示到你指定的邮箱，提醒你阅读。
+notify 是一个基于Python的小说更新提示爬虫，专用与《逆天邪神》小说的更新提示，信息来源为 http://nitianxieshen.com 。当小说更新时该爬虫会自动发送更新提示到你指定的邮箱，提醒你阅读。
 
 ##  快速使用
 
@@ -33,7 +33,7 @@ notify 是一个基于Python的小说更新提示爬虫，专用与《逆天邪�
 
    执行以上命令即可运行脚本，同时当前目录会生成两个文件：chapter_config用于保存上一次的最新章节编号（以便与判断最新章节）nitianxieshen.log用于记录程序运行日志
 
-   notify.py脚本会访问http://nitianxieshen.com网址获取最新章节，并与chapter_config文件中的章节序号比较，如果大于则发送邮件提醒，并保存最新的章节序号到chapter_config文件，程序退出。
+   notify.py脚本会访问 http://nitianxieshen.com 网址获取最新章节，并与chapter_config文件中的章节序号比较，如果大于则发送邮件提醒，并保存最新的章节序号到chapter_config文件，程序退出。
 
 3. 配置Linux crontab定时任务
 
