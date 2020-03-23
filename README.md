@@ -55,4 +55,4 @@ notify 是一个基于Python的小说更新提示爬虫，专用与《逆天邪�
 
    编辑完成后保存退出即可。如下图：
 
-   ![crotab](img\crontab.png)
+   ![crotab](https://raw.githubusercontent.com/1379/notify/master/img/crontab.png)
